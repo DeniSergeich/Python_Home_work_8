@@ -8,17 +8,17 @@
 # 3. Пользователь может ввести одну из характеристик для
 # поиска определенной записи(Например имя или фамилию человека)
 # 4. Использование функций. Ваша программа не должна быть линейной
-import functions
+import functions as func
 
 
 while True:
     print('1. вывод, 2. добавление, 3. поиск')
     mode = int(input())
     if mode == 1:
-        functions.show_data()
+        func.show_data()
     elif mode == 2:
-        functions.add_data()
+        func.add_data()
     elif mode == 3:
-        functions.find_data()
+        func.find_data()
     else:
         break
