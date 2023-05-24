@@ -25,12 +25,11 @@ def find_data() -> None:
     else:
         print('\n')                   
         print(*result, sep = '\n')
-        print('\n')         
-    print('Требуется уточнение поиска? \nЕсли требуется, введите Да. Если нет, нажмите Enter')
-    mode = input()
+        print('\n')    
+    mode = input('Требуется уточнение поиска? \nЕсли требуется, введите Да. Если нет, нажмите Enter: ')
     mode = mode.lower()
     if mode == 'да':
-        print(accuracy_search(result))
+        print(accuracy_search(result) + '\n')
     
 
 
@@ -48,7 +47,8 @@ def search(book: str, info: str) -> str:
 def accuracy_search(search_list: str) -> str:
     """Производит поиск по уточнению"""
     accuracy_list = []
-    mode = input('Введите уточнение поиска: ')    
+    mode = input('\nВведите уточнение поиска: ')
+    print('\n')    
     for item in search_list:        
         if mode in item.split():
             accuracy_list.append(item)            
